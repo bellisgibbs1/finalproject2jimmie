@@ -1,0 +1,183 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+
+
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+body,
+html{
+    background-color: black;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-align: left;
+
+   
+}
+
+
+.container {
+     width: 40%;
+    height: 40%;
+    display: flex;
+    height: auto;
+    padding: 0;
+    width:  100%;
+     height: auto;
+     margin: 0 auto;
+  
+
+
+}
+
+figure,
+img {
+    /* Sets image width to match parent */
+   
+     width:  100%;
+   
+}
+
+.container3{
+
+    width: 40%;
+    height: 40%;
+    padding: 5px;
+    margin: 0 auto;
+
+}
+
+.container1{
+
+    color: white;
+    font-family: 'Franklin Gothic Medium';
+    text-align: left;
+    font-size: 25px;
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+
+}
+
+.container4{
+
+    color: white;
+    font-family: 'Franklin Gothic Medium';
+    text-align: center;
+}
+
+
+.caption{
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+
+
+}
+
+
+.container.image {
+    max-width: 1200px;
+    padding: 0;
+}
+
+
+.container.image .caption,
+.container.image figcaption {
+    padding: 5px 10px;
+}
+
+
+body {
+    padding-bottom: 50px;
+}
+
+
+
+.horizontal-scroll{
+    max-width: 2000px;
+    overflow-x: auto;
+    margin: 0 auto;
+}
+
+.horizontal-scroll .inner {
+    width: max-content;
+}
+
+.horizontal-scroll section {
+    float: center;
+    margin-right: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    max-width: 80vw;
+}
+
+
+
+
+body {
+    padding-bottom: 50px;
+}
+
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+
+    .horizontal-scroll section {
+        max-width: 22vw;
+    }
+}
+
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 769px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 769px or larger -- so desktop */
+}
+
+
+/*********************************************************************
+  YOUR MEDIUM-DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 805px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 769px or larger -- so desktop */
+    .container {
+        padding: 0;
+    }
+}
+
+
+/*********************************************************************
+  YOUR LARGE DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 1205px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 769px or larger -- so desktop */
+    .container.image .caption,
+    .container.image figcaption {
+        padding: 5px 0;
+    }
+}
