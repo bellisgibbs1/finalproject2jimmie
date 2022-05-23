@@ -13,125 +13,107 @@ You will find this is far easier than the opposite task of using CSS to cram you
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
 
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+
+
+/** SET BORDER BOX EVERYWHERE */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/** APPLY BASE TAG STYLES */
+
 body,
-html{
+html {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    font-family:  sans-serif;
     background-color: black;
     color: #fff;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    text-align: left;
-
-   
 }
 
 
-h3{
-    color: white;
+
+/** Caption styles */
+
+.caption,
+figcaption {
+    font-size: 0.9rem;
+    color: #858080;
+    padding: 5px 0;
     text-align: center;
-    font-size: 25px;
 }
 
 
+.word{
+    font-size: 0.8rem;
+    color: #ffffff;
+    padding: 5px 0;
+
+}
+
+
+/** BASE CLASSES */
+
+
+/** Container styles to keep content from becoming too wide or coming too close to
+* mobile edge */
 
 .container {
-     width: 100%;
-    height: 100%;
-    display: flex;
+    width: 100%;
+    max-width: 800px;
     padding: 10px;
     margin: 0 auto;
-
 }
+
+
+/** Images are allowed to be a little wider when broken out into their own container */
 
 figure,
 img {
     /* Sets image width to match parent */
-   
-     width:  100%;
-   
+    width:  100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+
 }
 
-.container3{
-
-    width: 40%;
-    max-width: 800px;
-    height: 40%;
+.king{
+    width: 50%;
+    height: 50%;
     padding: 5px;
     margin: 0 auto;
-
-}
-
-.container1{
-
-    color: white;
-    font-family: 'Franklin Gothic Medium';
-    text-align: left;
-    font-size: 25px;
-    width: 100%;
-    padding: 10px;
-    margin: 0 auto;
-    justify-content: space-between;
-    flex-basis: 30%;
-
-}
-
-.container4{
-
-    color: white;
-    font-family: 'Franklin Gothic Medium';
-    text-align: center;
-}
-
-
-.caption{
-    text-align: center;
-    font-size: 20px;
-    font-style: italic;
-
 }
 
 #top {
     width: 50%;
     max-height: 50vh;
 }
-
-
-
 .container.image {
     max-width: 1200px;
     padding: 0;
 }
-
 
 .container.image .caption,
 .container.image figcaption {
     padding: 5px 10px;
 }
 
-
-
-.horizontal-scroll{
-    max-width: 2000px;
-    overflow-x: auto;
-    margin: 0 auto;
-}
-
-.horizontal-scroll .inner {
-    width: max-content;
-}
-
-.horizontal-scroll section {
-    float: center;
-    margin-right: 5px;
+.collage{
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    max-width: 80vw;
-}
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 0 auto;
+    font-size: 20px;
 
-.body {
-    padding-bottom: 50px;
 }
 
 
@@ -150,28 +132,8 @@ img {
 }
 
 .annotate{
+
     position: relative;
-}
-
-.black{
-    background-color: rgba(4, 4, 4, 0.65);
-}
-
-
-#camera:not(.active) {
-    top: 90%;
-    left: 90%;
-
-}
-
-.blue{
-    background-color: rgba(4, 4, 4, 0.65);
-}
-
-
-#cam:not(.active) {
-    top: 90%;
-    left: 90%;
 
 }
 
@@ -182,8 +144,8 @@ img {
     height: 100%;
     border-radius: 0;
     top: 0;
-    right: 1;
-    left: 1;
+    right: 0;
+    left: 0;
     bottom: 0;
 
 }
@@ -194,6 +156,27 @@ img {
 }
 
 
+.black{
+    background-color: rgba(1, 0, 0, 0.65);
+}
+
+
+#camera:not(.active) {
+    top: 85%;
+    left: 85%;
+}
+
+.blue{
+    background-color: rgba(6, 6, 6, 0.65);
+}
+
+#cam:not(.active) {
+    top: 63%;
+    left: 52%
+}
+
+
+
 
 /*********************************************************************
   YOUR TABLET/DESKTOP STYLES GO HERE
@@ -202,10 +185,6 @@ img {
 @media(min-width: 681px) {
     /* Any adjustments for tablets and larger go here.
     Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
-
-    .horizontal-scroll section {
-        max-width: 22vw;
-    }
 }
 
 
